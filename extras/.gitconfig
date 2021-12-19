@@ -1,0 +1,11 @@
+[alias]
+	co = checkout
+	br = branch
+	s = status
+	a = add .
+	c = commit -m
+	p = push
+	l = log --oneline
+
+[init]
+	defaultBranch = main

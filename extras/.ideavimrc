@@ -1,0 +1,7 @@
+set number relativenumber
+set surround
+set clipboard+=unnamed
+
+let mapleader=","
+
+nnoremap <leader>t :NERDTreeToggle<cr>
