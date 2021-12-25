@@ -17,5 +17,6 @@ Plug 'windwp/nvim-autopairs'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'overcache/NeoSolarized'
+Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 call plug#end()
 
