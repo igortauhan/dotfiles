@@ -1,11 +1,7 @@
 #!/bin/bash
 
 # dependencies
-sudo apt install build-essential curl lua5.3 fzf exa tmux
-
-# fish
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt update && sudo apt install fish
+sudo pacman -S base-devel curl lua fzf exa tmux ripgrep
 
 # vim plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

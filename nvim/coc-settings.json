@@ -1,9 +1,6 @@
-// codelens
 {
-  //java
   "codeLens.enable": true,
   "java.referencesCodeLens.enabled": true,
-  //cpp
   "languageserver": {
     "ccls": {
       "command": "ccls",
@@ -23,4 +20,3 @@
     }
   }
 }
-// "java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok/lombok.jar -Xbootclasspath/a:/usr/local/share/lombok/lombok.jar", //
