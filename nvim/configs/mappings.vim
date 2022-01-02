@@ -12,6 +12,8 @@ nnoremap <leader>so :syntax on<cr>
 
 " ,ff calls telescope
 nnoremap <leader>ff :Telescope find_files<cr>
+" ,fr telescope live grep
+nnoremap <leader>fr <cmd>Telescope live_grep<cr>
 " ,install 
 nnoremap <leader>install :PlugInstall<cr>
 " ,clo :CocList outline

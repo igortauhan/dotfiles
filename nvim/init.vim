@@ -24,8 +24,8 @@ luafile $HOME/.config/nvim/lua/treesitter.lua
 luafile $HOME/.config/nvim/lua/nvimtree.lua
 " autopairs
 luafile $HOME/.config/nvim/lua/autopairs.lua
-" feline
-lua require('feline').setup()
+" lualine
+lua require('lualine').setup{ options = {theme = 'powerline'},}
 " gitsigns
 lua require('gitsigns').setup()
 
