@@ -19,5 +19,5 @@ nnoremap <leader>clo :CocList outline<cr>
 " ,clo :CocList diagnostic
 nnoremap <leader>cld :CocList diagnostics<cr>
 " ,pp format code
-nnoremap <leader>pp :Prettier<cr>
+nnoremap <leader>asdf :Prettier<cr>
 

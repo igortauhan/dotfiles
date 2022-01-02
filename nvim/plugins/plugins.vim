@@ -14,9 +14,9 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'windwp/nvim-autopairs'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'feline-nvim/feline.nvim'
 Plug 'overcache/NeoSolarized'
 Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 
