@@ -15,8 +15,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'windwp/nvim-autopairs'
 Plug 'overcache/NeoSolarized'
-Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 
