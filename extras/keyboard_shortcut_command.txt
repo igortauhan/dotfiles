@@ -1,4 +1,0 @@
-Commands to create my keyboard shortcuts
-
-Rofi (after install adi1090x themes)
-rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/launchers/ribbon/ribbon_top_round.rasi
