@@ -38,3 +38,5 @@ function chpwd() {
     ll
 }
 
+# Runs
+. $HOME/.asdf/asdf.sh
