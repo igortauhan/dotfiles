@@ -19,6 +19,19 @@ def directory_exists?(dir)
     File.exist?(dir)
 end
 
+def symbolic(path)
+  if directory_exists?(ENV['HOME'] + "/#{path}")
+    puts "#{path} file exists, renamed to #{path}.backup.old"
+    # backup
+    run %{
+      mv ~/#{path} ~/#{path}.backup.old
+    }
+  end
+  run %{
+      ln -sf ~/projects/dotfiles/config/#{path} ~
+  }
+end
+
 def install_dependencies
   puts "======================================================"
   puts "installing dependencies"
@@ -67,24 +80,16 @@ def create_symbolic_link
   puts "creating symbolic links\n"
 
   puts "gitconfig"
-  run %{
-    cp -f ~/projects/dotfiles/extras/.gitconfig ~
-  }
+  symbolic(".gitconfig")
 
   puts "zshrc"
-  run %{
-    ln -sf ~/projects/dotfiles/zsh/.zshrc ~
-  }
+  symbolic(".zshrc")
  
   puts "ideavimrc"
-  run %{
-    ln -sf ~/projects/dotfiles/extras/.ideavimrc ~
-  }
+  symbolic(".ideavimrc")
  
   puts "tmuxconf"
-  run %{
-    ln -sf ~/projects/dotfiles/extras/.tmux.conf ~
-  }
+  symbolic(".tmux.conf")
 
   puts "======================================================\n"
 end
