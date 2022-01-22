@@ -1,4 +1,5 @@
 def welcome
+  puts
   puts %q{
      _                    _                   _       _    __ _ _           
     | |                  | |                 | |     | |  / _(_) |          
@@ -7,6 +8,7 @@ def welcome
     | || (_| | (_| | |_| | | | \__ \/ /  | (_| | (_) | |_| | | | |  __/\__ \
      \__\__,_|\__,_|\__,_|_| |_|___/___|  \__,_|\___/ \__|_| |_|_|\___||___/
   }
+  puts
 end
 
 # runs a shell command
@@ -33,7 +35,7 @@ def symbolic(path)
     }
   end
   run %{
-      ln -sf ~/projects/dotfiles/config/#{path} ~
+    ln -sf ~/projects/dotfiles/config/#{path} ~
   }
 end
 
@@ -43,12 +45,12 @@ def install_dependencies
   run %{
     sudo pacman -S base-devel curl lua tmux zsh exa
   }
-  puts "======================================================\n"
+  puts "======================================================"
 end
 
 def install_zsh_config
   puts "======================================================"
-  puts "installing zsh configs\n"
+  puts "installing zsh configs"
   
   puts "installing ohmyzsh"
   unless directory_exists?(ENV['HOME'] + "/.oh-my-zsh")
@@ -77,12 +79,12 @@ def install_zsh_config
     puts "zsh not installed!"
   end
 
-  puts "======================================================\n"
+  puts "======================================================"
 end
 
 def create_symbolic_link
   puts "======================================================"
-  puts "creating symbolic links\n"
+  puts "creating symbolic links"
 
   puts "gitconfig"
   symbolic(".gitconfig")
@@ -96,7 +98,15 @@ def create_symbolic_link
   puts "tmuxconf"
   symbolic(".tmux.conf")
 
-  puts "======================================================\n"
+  puts "======================================================"
+end
+
+def done
+  puts
+  puts "======================================================"
+  puts "Done. Please, restart your terminal."
+  puts "======================================================"
+  puts
 end
 
 task :install do
@@ -107,4 +117,6 @@ task :install do
   install_zsh_config if ask("ohmyzsh and zinit")
 
   create_symbolic_link if ask("my config files")
+
+  done
 end
