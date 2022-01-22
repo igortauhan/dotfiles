@@ -10,7 +10,7 @@
 
 - zsh config
   -  ohmyzsh
-  -  zinit
+  -  zinit (history-search, auto-suggestions, fast-syntax-highlighting)
 - gitconfig
 - tmux config
 
@@ -23,3 +23,5 @@
 
 - Clone the repo
 - Inside the repo folder, run -> rake install
+
+All installation files will be backed up if exists
