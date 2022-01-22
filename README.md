@@ -21,7 +21,11 @@
 
 ## Installation
 
+> **Run only in Arch Linux or based distros**
+>
+> You can modify the prerequisites installation for your package manager on Rakefile
+
 - Clone the repo
 - Inside the repo folder, run -> rake install
 
-All installation files will be backed up if exists
+All installation files will be backed up if exists.
