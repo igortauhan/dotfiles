@@ -6,7 +6,13 @@
      \__\__,_|\__,_|\__,_|_| |_|___/___|  \__,_|\___/ \__|_| |_|_|\___||___/
  
 
-# taauhsz dotfiles
+## Contains
+
+- zsh config
+  -  ohmyzsh
+  -  zinit
+- gitconfig
+- tmux config
 
 ## Prerequisites
 
