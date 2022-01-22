@@ -11,12 +11,17 @@ end
 
 # runs a shell command
 def run(command)
-    `#{command}`
+  `#{command}`
 end
 
 # return true if the directory or file exists
 def directory_exists?(dir)
-    File.exist?(dir)
+  File.exist?(dir)
+end
+
+def ask(config)
+  puts "You want to install #{config}? (y/n)"
+  return true if STDIN.gets.chomp == "y"
 end
 
 def symbolic(path)
@@ -95,11 +100,11 @@ def create_symbolic_link
 end
 
 task :install do
-    welcome
+  welcome
 
-    install_dependencies
+  install_dependencies
 
-    install_zsh_config
+  install_zsh_config if ask("ohmyzsh and zinit")
 
-    create_symbolic_link
+  create_symbolic_link if ask("my config files")
 end
