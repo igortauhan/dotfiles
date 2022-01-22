@@ -1,3 +1,14 @@
+def welcome
+  puts %q{
+     _                    _                   _       _    __ _ _           
+    | |                  | |                 | |     | |  / _(_) |          
+    | |_ __ _  __ _ _   _| |__  ___ ____   __| | ___ | |_| |_ _| | ___  ___ 
+    | __/ _` |/ _` | | | | '_ \/ __|_  /  / _` |/ _ \| __|  _| | |/ _ \/ __|
+    | || (_| | (_| | |_| | | | \__ \/ /  | (_| | (_) | |_| | | | |  __/\__ \
+     \__\__,_|\__,_|\__,_|_| |_|___/___|  \__,_|\___/ \__|_| |_|_|\___||___/
+  }
+end
+
 # runs a shell command
 def run(command)
     `#{command}`
@@ -62,6 +73,8 @@ def create_symbolic_link
 end
 
 task :install do
+    welcome
+
     install_dependencies
 
     install_zsh_config
