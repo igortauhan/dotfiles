@@ -14,6 +14,11 @@ def run(command)
     `#{command}`
 end
 
+# return true if the directory or file exists
+def directory_exists?(dir)
+    File.exist?(dir)
+end
+
 def install_dependencies
   puts "======================================================"
   puts "installing dependencies"
@@ -28,19 +33,31 @@ def install_zsh_config
   puts "installing zsh configs\n"
   
   puts "installing ohmyzsh"
-  run %{
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  }
+  unless directory_exists?(ENV['HOME'] + "/.oh-my-zsh")
+    run %{
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    }
+  else
+    puts "oh-my-zsh already installed!"
+  end
 
   puts "installing zinit"
-  run %{
-    sh -c "$(curl -fsSL https://git.io/zinit-install)"
-  }
+  unless directory_exists?(ENV['HOME'] + "/.local/share/zinit")
+    run %{
+      sh -c "$(curl -fsSL https://git.io/zinit-install)"
+    }
+  else
+    puts "zinit already installed!"
+  end
 
   puts "changing the default shell for zsh"
-  run %{
-    chsh -s /usr/bin/zsh
-  }
+  if directory_exists?(ENV['HOME'] + "/.local/share/zinit")
+    run %{
+      chsh -s /usr/bin/zsh
+    }
+  else
+    puts "zsh not installed!"
+  end
 
   puts "======================================================\n"
 end
