@@ -64,7 +64,7 @@ def install_zsh_config
   end
 
   puts "changing the default shell for zsh"
-  if directory_exists?(ENV['HOME'] + "/.local/share/zinit")
+  if directory_exists?(ENV['HOME'] + "/usr/bin/zsh")
     run %{
       chsh -s /usr/bin/zsh
     }
