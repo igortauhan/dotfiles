@@ -40,6 +40,7 @@ zinit light romkatv/powerlevel10k
 
 # Aliases
 alias ll="exa -l -g -a --icons"
+alias vim="nvim"
 
 # Functions
 # ll after cd
