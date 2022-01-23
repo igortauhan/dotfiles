@@ -26,7 +26,7 @@ def ask(config)
   return true if STDIN.gets.chomp == "y"
 end
 
-def symbolic(path)
+def install_file(path)
   if directory_exists?(ENV['HOME'] + "/#{path}")
     puts "#{path} file exists, renamed to #{path}.backup.old"
     # backup
@@ -35,7 +35,7 @@ def symbolic(path)
     }
   end
   run %{
-    ln -sf #{__dir__}/config/#{path} ~
+    cp -f #{__dir__}/config/#{path} ~
   }
 end
 
@@ -73,21 +73,21 @@ def install_zsh_config
   puts "======================================================"
 end
 
-def create_symbolic_link
+def install_config_files
   puts "======================================================"
-  puts "creating symbolic links"
+  puts "Installing config files"
 
   puts "gitconfig"
-  symbolic(".gitconfig")
+  install_file(".gitconfig")
 
   puts "zshrc"
-  symbolic(".zshrc")
+  install_file(".zshrc")
  
   puts "ideavimrc"
-  symbolic(".ideavimrc")
+  install_file(".ideavimrc")
  
   puts "tmuxconf"
-  symbolic(".tmux.conf")
+  install_file(".tmux.conf")
 
   puts "======================================================"
 end
@@ -105,7 +105,7 @@ task :install do
 
   install_zsh_config if ask("ohmyzsh and zinit")
 
-  create_symbolic_link if ask("my config files")
+  install_config_files if ask("my config files")
 
   done
 end
