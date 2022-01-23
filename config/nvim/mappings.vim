@@ -29,3 +29,6 @@ nnoremap <silent> <leader>fg <cmd>Telescope live_grep<cr>
 " barbar move between tabs
 nnoremap <silent> <A-h> :BufferPrevious<CR>
 nnoremap <silent> <A-l> :BufferNext<CR>
+
+" nvim tree toggle
+nnoremap <silent> <leader>t :NvimTreeToggle<CR>

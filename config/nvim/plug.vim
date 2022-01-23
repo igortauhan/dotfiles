@@ -1,8 +1,10 @@
 call plug#begin()
 " utils
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'tpope/vim-surround'
+Plug 'windwp/nvim-autopairs'
 
 " git plugins
 Plug 'lewis6991/gitsigns.nvim'

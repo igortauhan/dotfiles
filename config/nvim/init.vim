@@ -23,6 +23,7 @@ luafile $HOME/.config/nvim/plugin/_lspsaga.lua
 luafile $HOME/.config/nvim/plugin/_nvimcmp.lua
 luafile $HOME/.config/nvim/plugin/_lualine.lua
 luafile $HOME/.config/nvim/plugin/_material.lua
+luafile $HOME/.config/nvim/plugin/_nvimtree.lua
 
 let g:material_style = 'deep ocean'
 colorscheme material
