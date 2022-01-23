@@ -35,7 +35,7 @@ def symbolic(path)
     }
   end
   run %{
-    ln -sf ~/Projects/dotfiles/config/#{path} ~
+    ln -sf #{__dir__}/config/#{path} ~
   }
 end
 

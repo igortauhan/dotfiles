@@ -18,7 +18,7 @@
 
 ### Dependencies
 
-- Ruby
+- Ruby: I recommend you to use [asdf](https://github.com/asdf-vm/asdf) to install ruby
 - Rake Gem: gem install rake
 
 | OS | Command |
