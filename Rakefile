@@ -39,15 +39,6 @@ def symbolic(path)
   }
 end
 
-def install_dependencies
-  puts "======================================================"
-  puts "installing dependencies"
-  run %{
-    sudo pacman -S base-devel curl lua tmux zsh exa
-  }
-  puts "======================================================"
-end
-
 def install_zsh_config
   puts "======================================================"
   puts "installing zsh configs"
@@ -111,8 +102,6 @@ end
 
 task :install do
   welcome
-
-  install_dependencies
 
   install_zsh_config if ask("ohmyzsh and zinit")
 
