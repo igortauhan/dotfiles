@@ -35,7 +35,7 @@ def symbolic(path)
     }
   end
   run %{
-    ln -sf ~/projects/dotfiles/config/#{path} ~
+    ln -sf ~/Projects/dotfiles/config/#{path} ~
   }
 end
 
@@ -62,7 +62,7 @@ def install_zsh_config
   end
 
   puts "changing the default shell for zsh"
-  if directory_exists?(ENV['HOME'] + "/usr/bin/zsh")
+  if directory_exists?("/usr/bin/zsh")
     run %{
       chsh -s /usr/bin/zsh
     }
