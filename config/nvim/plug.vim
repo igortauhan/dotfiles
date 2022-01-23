@@ -1,12 +1,17 @@
 call plug#begin()
-" git plugins
+" utils
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
+
+" git plugins
 Plug 'lewis6991/gitsigns.nvim'
 
 " themming
 Plug 'marko-cerovac/material.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
 
 " lsp plugins
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

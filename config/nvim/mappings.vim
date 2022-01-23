@@ -21,3 +21,11 @@ nnoremap <silent> <leader>cd :Lspsaga show_line_diagnostics<CR>
 " lspsaga float terminal
 nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
 tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
+
+" telescope find files
+nnoremap <silent> <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <silent> <leader>fg <cmd>Telescope live_grep<cr>
+
+" barbar move between tabs
+nnoremap <silent> <A-h> :BufferPrevious<CR>
+nnoremap <silent> <A-l> :BufferNext<CR>
