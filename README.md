@@ -16,6 +16,24 @@
 
 ## Prerequisites
 
+### Dependencies
+
+> Required dependencies
+>
+> Arch Linux or based distros: 
+> sudo pacman -S base-devel curl zsh
+>
+> Ubuntu or based distros: 
+> sudo apt install build-essential curl zsh
+>
+> Optional dependencies (if you want install my config files)
+>
+> Arch Linux or based distros: 
+> sudo pacman -S base-devel curl zsh lua tmux exa
+>
+> Ubuntu or based distros: 
+> sudo apt install build-essential curl zsh lua5.3 tmux exa
+
 - Ruby
 - Rake gem (gem install rake)
 
