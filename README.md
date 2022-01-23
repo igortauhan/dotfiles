@@ -26,7 +26,7 @@
 > Ubuntu or based distros: 
 > sudo apt install build-essential curl zsh
 >
-> Optional dependencies (if you want install my config files)
+> Optional dependencies (if you want to install my config files)
 >
 > Arch Linux or based distros: 
 > sudo pacman -S base-devel curl zsh lua tmux exa

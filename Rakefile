@@ -46,7 +46,7 @@ def install_zsh_config
   puts "installing ohmyzsh"
   unless directory_exists?(ENV['HOME'] + "/.oh-my-zsh")
     run %{
-      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     }
   else
     puts "oh-my-zsh already installed!"
