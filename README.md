@@ -18,12 +18,13 @@
 
 ### Dependencies
 
+- Ruby
+- Rake Gem: gem install rake
+
 | OS | Command |
 | -- | ------- |
 | Arch Linux or based distros: | sudo pacman -S base-devel curl zsh lua tmux exa |
 | Ubuntu or based distros: | sudo apt install build-essential curl zsh lua5.3 tmux exa |
-| Ruby | To use the rake gem |
-| Gem | Rake (gem install rake) |
 
 ## Installation
 

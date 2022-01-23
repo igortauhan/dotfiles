@@ -39,7 +39,7 @@ zinit ice depth"1"
 zinit light romkatv/powerlevel10k
 
 # Aliases
-alias ll="exa -l -g -a"
+alias ll="exa -l -g -a --icons"
 
 # Functions
 # ll after cd
