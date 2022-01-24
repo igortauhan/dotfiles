@@ -35,6 +35,7 @@
 - Ruby: I recommend you to use [asdf](https://github.com/asdf-vm/asdf) to install ruby
 - Rake Gem: gem install rake
 - NodeJS: I recommend you to use [asdf](https://github.com/asdf-vm/asdf) to install node
+- Last version of [neovim](https://github.com/neovim/neovim)
 
 | OS | Command |
 | -- | ------- |
@@ -44,6 +45,8 @@
 ## Installation
 
 > Don't forget to install [Ruby](https://github.com/asdf-vm/asdf-ruby) and [NodeJS](https://github.com/asdf-vm/asdf-nodejs) before install
+>
+> If you want to install my neovim configs, make sure you have the last version of neovim. I recommend you to [build from source](https://github.com/neovim/neovim/wiki/Building-Neovim)
 
 - Clone the repo
 - Inside the repo folder, run -> rake install

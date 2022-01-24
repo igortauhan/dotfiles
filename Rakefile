@@ -106,6 +106,10 @@ def install_neovim
   puts '======================================================'
 end
 
+def done_neovim
+  puts 'After restart your terminal, open neovim and run :PlugInstall to install the plugins'
+end
+
 def done
   puts
   puts '======================================================'
@@ -121,7 +125,10 @@ task :install do
 
   install_config_files if ask('my config files')
 
-  install_neovim if ask('neovim config')
+  if ask('neovim')
+    install_neovim
+    done_neovim
+  end
 
   done
 end
