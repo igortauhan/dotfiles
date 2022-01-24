@@ -29,3 +29,8 @@ require'lspconfig'.tsserver.setup{
 require'lspconfig'.jsonls.setup{
     capabilities = capabilities
 }
+
+-- C CPP
+require'lspconfig'.ccls.setup{
+    capabilities = capabilities
+}
