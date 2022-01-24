@@ -11,7 +11,7 @@
 - neovim setup
 - zsh config
   -  ohmyzsh
-  -  zinit (history-search, auto-suggestions, fast-syntax-highlighting)
+  -  zinit (history-search, auto-suggestions, fast-syntax-highlighting, powerlevel10k)
 - gitconfig
 - tmux config
 
@@ -32,10 +32,10 @@
 
 ### Dependencies
 
-- Ruby: I recommend you to use [asdf](https://github.com/asdf-vm/asdf) to install ruby
+- Ruby
 - Rake Gem: gem install rake
-- NodeJS: I recommend you to use [asdf](https://github.com/asdf-vm/asdf) to install node
-- Last version of [neovim](https://github.com/neovim/neovim)
+- Node
+- Last [neovim](https://github.com/neovim/neovim) version
 
 | OS | Command |
 | -- | ------- |
@@ -49,6 +49,8 @@
 > If you want to install my neovim configs, make sure you have the last version of neovim. I recommend you to [build from source](https://github.com/neovim/neovim/wiki/Building-Neovim)
 >
 > If you want to install some lsps, run the script inside the dotfiles/utils folder
+>
+> These dotfiles use [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme, make sure you have some [nerd fonts](https://github.com/ryanoasis/nerd-fonts) installed
 
 - Clone the repo
 - Inside the repo folder, run -> rake install
