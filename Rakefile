@@ -108,6 +108,8 @@ end
 
 def done_neovim
   puts 'After restart your terminal, open neovim and run :PlugInstall to install the plugins'
+  puts 'If you want to install lsp servers for neovim, run the script inside the dotfiles/utils folder.'
+  puts 'Contains: Ruby, Python, HTML, CSS, JS/TS, JSON'
 end
 
 def done

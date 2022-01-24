@@ -47,6 +47,7 @@
 > Don't forget to install [Ruby](https://github.com/asdf-vm/asdf-ruby) and [NodeJS](https://github.com/asdf-vm/asdf-nodejs) before install
 >
 > If you want to install my neovim configs, make sure you have the last version of neovim. I recommend you to [build from source](https://github.com/neovim/neovim/wiki/Building-Neovim)
+> If you want to install some lsps, run the script inside the dotfiles/utils folder
 
 - Clone the repo
 - Inside the repo folder, run -> rake install
