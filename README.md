@@ -20,7 +20,7 @@
 - Native LSP
   -  [nvimlsp](https://github.com/neovim/nvim-lspconfig)
   -  [nvimcmp](https://github.com/hrsh7th/nvim-cmp)
-  -  [lspnaga](https://github.com/glepnir/lspsaga.nvim)
+  -  [lspsaga](https://github.com/glepnir/lspsaga.nvim)
 - Themming with top tabs, dev icons and material theme
   -  [Top bar: barbar](https://github.com/romgrk/barbar.nvim)
   -  [Devicons: neovim web devicons](https://github.com/kyazdani42/nvim-web-devicons)
@@ -47,6 +47,7 @@
 > Don't forget to install [Ruby](https://github.com/asdf-vm/asdf-ruby) and [NodeJS](https://github.com/asdf-vm/asdf-nodejs) before install
 >
 > If you want to install my neovim configs, make sure you have the last version of neovim. I recommend you to [build from source](https://github.com/neovim/neovim/wiki/Building-Neovim)
+>
 > If you want to install some lsps, run the script inside the dotfiles/utils folder
 
 - Clone the repo
