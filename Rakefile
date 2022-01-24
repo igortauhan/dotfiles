@@ -92,6 +92,20 @@ def install_config_files
   puts '======================================================'
 end
 
+def install_neovim
+  puts '======================================================'
+  if directory_exists?(ENV['HOME'] + '/.config/nvim')
+    puts 'neovim config folder already exist, renamed to neovim_backup_old'
+    run %{
+      mv ~/.config/nvim ~/.config/neovim_backup_old
+    }
+  end
+  run %{
+    cp -r #{__dir__}/config/nvim ~/.config
+  }
+  puts '======================================================'
+end
+
 def done
   puts
   puts '======================================================'
@@ -106,6 +120,8 @@ task :install do
   install_zsh_config if ask('ohmyzsh and zinit')
 
   install_config_files if ask('my config files')
+
+  install_neovim if ask('neovim config')
 
   done
 end
