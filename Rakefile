@@ -23,7 +23,7 @@ end
 
 def ask(config)
   puts "You want to install #{config}? (y/n)"
-  return true if STDIN.gets.chomp == "y"
+  return true if $stdin.gets.chomp == 'y'
 end
 
 def install_file(path)
@@ -40,72 +40,72 @@ def install_file(path)
 end
 
 def install_zsh_config
-  puts "======================================================"
-  puts "installing zsh configs"
-  
-  puts "installing ohmyzsh"
-  unless directory_exists?(ENV['HOME'] + "/.oh-my-zsh")
+  puts '======================================================'
+  puts 'installing zsh configs'
+
+  puts 'installing ohmyzsh'
+  unless directory_exists?(ENV['HOME'] + '/.oh-my-zsh')
     run %{
-      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+      sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)' "" --unattended
     }
   else
-    puts "oh-my-zsh already installed!"
+    puts 'oh-my-zsh already installed!'
   end
 
-  puts "installing zinit"
-  unless directory_exists?(ENV['HOME'] + "/.local/share/zinit")
+  puts 'installing zinit'
+  unless directory_exists?(ENV['HOME'] + '/.local/share/zinit')
     run %{
       sh -c "$(curl -fsSL https://git.io/zinit-install)"
     }
   else
-    puts "zinit already installed!"
+    puts 'zinit already installed!'
   end
 
-  puts "changing the default shell for zsh"
-  if directory_exists?("/usr/bin/zsh")
+  puts 'changing the default shell for zsh'
+  if directory_exists?('/usr/bin/zsh')
     run %{
       chsh -s /usr/bin/zsh
     }
   else
-    puts "zsh not installed!"
+    puts 'zsh not installed!'
   end
 
-  puts "======================================================"
+  puts '======================================================'
 end
 
 def install_config_files
-  puts "======================================================"
-  puts "Installing config files"
+  puts '======================================================'
+  puts 'Installing config files'
 
-  puts "gitconfig"
-  install_file(".gitconfig")
+  puts 'gitconfig'
+  install_file('.gitconfig') if ask('gitconfig')
 
-  puts "zshrc"
-  install_file(".zshrc")
- 
-  puts "ideavimrc"
-  install_file(".ideavimrc")
- 
-  puts "tmuxconf"
-  install_file(".tmux.conf")
+  puts 'zshrc'
+  install_file('.zshrc') if ask('zshrc')
 
-  puts "======================================================"
+  puts 'ideavimrc'
+  install_file('.ideavimrc') if ask('ideavimrc')
+
+  puts 'tmuxconf'
+  install_file('.tmux.conf') if ask('tmux.conf')
+
+  puts '======================================================'
 end
 
 def done
   puts
-  puts "======================================================"
-  puts "Done. Please, restart your terminal."
-  puts "======================================================"
+  puts '======================================================'
+  puts 'Done. Please, restart your terminal.'
+  puts '======================================================'
   puts
 end
 
 task :install do
   welcome
 
-  install_zsh_config if ask("ohmyzsh and zinit")
+  install_zsh_config if ask('ohmyzsh and zinit')
 
-  install_config_files if ask("my config files")
+  install_config_files if ask('my config files')
 
   done
 end
