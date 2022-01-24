@@ -51,6 +51,8 @@
 > If you want to install some lsps, run the script inside the dotfiles/utils folder
 >
 > These dotfiles use [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme, make sure you have some [nerd fonts](https://github.com/ryanoasis/nerd-fonts) installed
+>
+> If the zinit installation is stuck at ***INFO: Updating $HOME/.zshrc(10 lines of code, at the bottom)*** just type enter
 
 - Clone the repo
 - Inside the repo folder, run -> rake install
