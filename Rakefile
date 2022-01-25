@@ -46,7 +46,7 @@ def install_zsh_config
   puts 'installing ohmyzsh'
   unless directory_exists?(ENV['HOME'] + '/.oh-my-zsh')
     run %{
-      sh -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)' "" --unattended
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
     }
   else
     puts 'oh-my-zsh already installed!'
@@ -102,6 +102,10 @@ def install_neovim
   end
   run %{
     cp -r #{__dir__}/config/nvim ~/.config
+  }
+  run %{
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   }
   puts '======================================================'
 end
