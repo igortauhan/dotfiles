@@ -5,6 +5,9 @@
     | || (_| | (_| | |_| | | | \__ \/ /  | (_| | (_) | |_| | | | |  __/\__ \
      \__\__,_|\__,_|\__,_|_| |_|___/___|  \__,_|\___/ \__|_| |_|_|\___||___/
  
+# Warning
+
+**Don't use my configs if you don't know what it does!** Use at your own risk.
 
 ## Contains
 
