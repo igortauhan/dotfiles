@@ -9,7 +9,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-ZSH_THEME="bira"
+ZSH_THEME="crcandy"
 
 # Plugins
 plugins=(git)
@@ -34,13 +34,10 @@ autoload -Uz _zinit
 zinit light zdharma-continuum/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
-### powerlevel10k
-zinit ice depth"1" 
-zinit light romkatv/powerlevel10k
 
 # Aliases
-alias ll="exa -l -g -a --icons"
-alias lla="exa -l -g -a --icons --tree --level=2"
+alias ll="exa -l -g -a"
+alias lla="exa -l -g -a --tree --level=2"
 alias vim="nvim"
 
 # Functions
