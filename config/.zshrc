@@ -39,8 +39,8 @@ zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
 
 # Aliases
-alias ll="exa -l -g -a"
-alias lla="exa -l -g -a --tree --level=2"
+alias ll="exa -l -g -a --icons --git"
+alias lla="exa -l -g -a --icons --git --tree --level=2 -I=.git"
 alias vim="nvim"
 
 # Functions
