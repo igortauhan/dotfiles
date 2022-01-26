@@ -34,6 +34,9 @@ autoload -Uz _zinit
 zinit light zdharma-continuum/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
+# Load powerlevel10k theme
+zinit ice depth"1" # git clone depth
+zinit light romkatv/powerlevel10k
 
 # Aliases
 alias ll="exa -l -g -a"

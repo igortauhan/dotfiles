@@ -110,6 +110,22 @@ def install_neovim
   puts '======================================================'
 end
 
+def install_fonts
+  puts '======================================================'
+  unless directory_exists?('$HOME/.local/share/fonts')
+    run %{
+      mkdir -p $HOME/.local/share/fonts
+      }
+  end
+  run %{
+    cp #{__dir__}/fonts/*.ttf $HOME/.local/share/fonts
+    }
+  run %{
+    fc-cache -fv
+    }
+  puts '======================================================'
+end
+
 def done_neovim
   puts 'After restart your terminal, open neovim and run :PlugInstall to install the plugins'
   puts 'If you want to install lsp servers for neovim, run the script inside the dotfiles/utils folder.'
@@ -135,6 +151,8 @@ task :install do
     install_neovim
     done_neovim
   end
+
+  install_fonts if ask('Fira Code Nerd Font (recommended)')
 
   done
 end
