@@ -40,7 +40,7 @@ zinit light romkatv/powerlevel10k
 
 # Aliases
 alias ll="exa -l -g -a --icons --git"
-alias lla="exa -l -g -a --icons --git --tree --level=2 -I=.git"
+alias lla="exa -l -g -a --icons --git --tree --level=3 -I=.git"
 alias vim="nvim"
 
 # Functions
