@@ -25,5 +25,5 @@ luafile $HOME/.config/nvim/plugin/_lualine.lua
 luafile $HOME/.config/nvim/plugin/_material.lua
 luafile $HOME/.config/nvim/plugin/_nvimtree.lua
 
-let g:material_style = 'darker'
+let g:material_style = 'palenight'
 colorscheme material

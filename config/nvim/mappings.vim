@@ -1,7 +1,7 @@
 let mapleader=","
 
 " open vertical tab
-nnoremap <leader>\ :vs<cr>
+nnoremap <leader>= :vs<cr>
 
 " enable syntax
 nnoremap <leader>so :syntax enable<cr>
