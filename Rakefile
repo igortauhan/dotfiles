@@ -37,6 +37,9 @@ def install_file(path)
   run %{
     cp -f #{__dir__}/config/#{path} ~
   }
+  run %{
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  }
 end
 
 def install_zsh_config
