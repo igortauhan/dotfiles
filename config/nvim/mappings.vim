@@ -15,7 +15,7 @@ nnoremap <silent> <leader>gs :Lspsaga signature_help<CR>
 " lspsaga rename
 nnoremap <silent> <leader>rr :Lspsaga rename<CR>
 " lspsaga defination
-nnoremap <silent> <leader>gd :Lspsaga preview_defination<CR>
+nnoremap <silent> <leader>gd :Lspsaga preview_definition<CR>
 " lspsaga diagnostics
 nnoremap <silent> <leader>cd :Lspsaga show_line_diagnostics<CR>
 " lspsaga float terminal
