@@ -42,6 +42,10 @@ zinit light romkatv/powerlevel10k
 alias ll="exa -l -g -a --icons --git"
 alias lla="exa -l -g -a --icons --git --tree --level=3 -I=.git"
 alias vim="nvim"
+alias tns="tmux -2 new -s"
+alias tls="tmux ls"
+alias tas="tmux a -t"
+alias tks="tmux kill-session -t"
 
 # Functions
 # ll after cd
