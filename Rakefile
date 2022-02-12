@@ -113,6 +113,20 @@ def install_neovim
   puts '======================================================'
 end
 
+def install_kitty
+  puts '======================================================'
+  if directory_exists?(ENV['HOME'] + '/.config/kitty')
+    puts 'kitty  config folder already exist, renamed to kitty_backup_old'
+    run %{
+      mv ~/.config/kitty ~/.config/kitty_backup_old
+    }
+  end
+  run %{
+    cp -r #{__dir__}/config/kitty ~/.config
+  }
+  puts '======================================================'
+end
+
 def done_neovim
   puts 'After restart your terminal, open neovim and run :PlugInstall to install the plugins'
   puts 'If you want to install lsp servers for neovim, run the script inside the dotfiles/utils folder.'
@@ -138,6 +152,8 @@ task :install do
     install_neovim
     done_neovim
   end
+
+  install_kitty if ask('kitty terminal')
 
   done
 end

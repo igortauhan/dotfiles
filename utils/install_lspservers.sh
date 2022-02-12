@@ -3,7 +3,7 @@
 set -e
 
 # install ruby language server
-gem install --user-install solargraph
+gem install solargraph
 
 # install python language server
 npm install --global pyright
