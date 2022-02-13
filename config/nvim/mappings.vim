@@ -1,5 +1,8 @@
 let mapleader=","
 
+" native lsp formatting
+nnoremap <silent> <leader>asdf <cmd>lua vim.lsp.buf.formatting_sync()<CR>
+
 " open vertical tab
 nnoremap <leader>= :vs<cr>
 
