@@ -1,4 +1,4 @@
-![Terminal-Print](images/welcome.png)
+![Terminal-Print](images/print.png)
 
 # Warning
 
