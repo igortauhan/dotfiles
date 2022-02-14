@@ -9,7 +9,7 @@
 - neovim setup
 - zsh config
   -  ohmyzsh
-  -  zinit (history-search, auto-suggestions, fast-syntax-highlighting, powerlevel10k)
+  -  zinit (history-search, auto-suggestions, fast-syntax-highlighting, fzf)
 - gitconfig
 - tmux config
 
@@ -47,8 +47,6 @@
 > If you want to install my neovim configs, make sure you have the last version of neovim. I recommend you to [build from source](https://github.com/neovim/neovim/wiki/Building-Neovim)
 >
 > If you want to install some lsps, run the script inside the dotfiles/utils folder
->
-> These dotfiles use [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme, make sure you have some [nerd fonts](https://github.com/ryanoasis/nerd-fonts) installed
 >
 > If the zinit installation is stuck at ***INFO: Updating $HOME/.zshrc(10 lines of code, at the bottom)*** just type enter
 
