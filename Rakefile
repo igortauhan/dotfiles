@@ -37,9 +37,6 @@ def install_file(path)
   run %{
     cp -f #{__dir__}/config/#{path} ~
   }
-  run %{
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  }
 end
 
 def install_zsh_config
@@ -89,8 +86,13 @@ def install_config_files
   puts 'ideavimrc'
   install_file('.ideavimrc') if ask('ideavimrc')
 
-  puts 'tmuxconf'
-  install_file('.tmux.conf') if ask('tmux.conf')
+  if (ask'tmuxconf')
+    install_file('.tmux.conf')
+    run %{
+      git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    }
+  end
+
 
   puts '======================================================'
 end
