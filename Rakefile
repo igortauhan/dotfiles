@@ -23,6 +23,7 @@ end
 
 def ask(config)
   puts "You want to install #{config}? (y/n)"
+  puts
   return true if $stdin.gets.chomp == 'y'
 end
 
@@ -40,8 +41,10 @@ def install_file(path)
 end
 
 def install_zsh_config
+  puts
   puts '======================================================'
   puts 'installing zsh configs'
+  puts
 
   puts 'installing ohmyzsh'
   unless directory_exists?(ENV['HOME'] + '/.oh-my-zsh')
@@ -50,6 +53,7 @@ def install_zsh_config
     }
   else
     puts 'oh-my-zsh already installed!'
+    puts
   end
 
   puts 'installing zinit'
@@ -59,31 +63,39 @@ def install_zsh_config
     }
   else
     puts 'zinit already installed!'
+    puts
   end
 
-  puts 'changing the default shell for zsh'
+  puts 'changing the default shell to zsh'
+  puts
   if directory_exists?('/usr/bin/zsh')
     run %{
       chsh -s /usr/bin/zsh
     }
   else
     puts 'zsh not installed!'
+    puts
   end
 
   puts '======================================================'
+  puts
 end
 
 def install_config_files
   puts '======================================================'
   puts 'Installing config files'
+  puts
 
   puts 'gitconfig'
+  puts
   install_file('.gitconfig') if ask('gitconfig')
 
   puts 'zshrc'
+  puts
   install_file('.zshrc') if ask('zshrc')
 
   puts 'ideavimrc'
+  puts
   install_file('.ideavimrc') if ask('ideavimrc')
 
   if (ask'tmuxconf')
@@ -96,9 +108,12 @@ def install_config_files
 end
 
 def install_neovim
+  puts
   puts '======================================================'
+
   if directory_exists?(ENV['HOME'] + '/.config/nvim')
     puts 'neovim config folder already exist, renamed to neovim_backup_old'
+    puts
     run %{
       mv ~/.config/nvim ~/.config/neovim_backup_old
     }
@@ -110,11 +125,15 @@ def install_neovim
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   }
+
   puts '======================================================'
+  puts
 end
 
 def install_alacritty
+  puts
   puts '======================================================'
+
   if directory_exists?(ENV['HOME'] + '/.config/alacritty')
     puts 'alacritty config folder already exist, renamed to alacritty_backup_old'
     run %{
@@ -125,12 +144,17 @@ def install_alacritty
     cp -r #{__dir__}/config/alacritty ~/.config
   }
   puts '======================================================'
+
+  puts
 end
 
 def done_neovim
   puts 'After restart your terminal, open neovim and run :PlugInstall to install the plugins'
+  puts
   puts 'If you want to install lsp servers for neovim, run the script inside the dotfiles/utils folder.'
+  puts
   puts 'Contains: Ruby, Python, HTML, CSS, JS/TS, JSON'
+  puts
 end
 
 def done
