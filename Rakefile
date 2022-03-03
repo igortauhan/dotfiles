@@ -92,8 +92,6 @@ def install_config_files
       git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     }
   end
-
-
   puts '======================================================'
 end
 
@@ -115,16 +113,16 @@ def install_neovim
   puts '======================================================'
 end
 
-def install_kitty
+def install_alacritty
   puts '======================================================'
-  if directory_exists?(ENV['HOME'] + '/.config/kitty')
-    puts 'kitty  config folder already exist, renamed to kitty_backup_old'
+  if directory_exists?(ENV['HOME'] + '/.config/alacritty')
+    puts 'alacritty config folder already exist, renamed to alacritty_backup_old'
     run %{
-      mv ~/.config/kitty ~/.config/kitty_backup_old
+      mv ~/.config/alacritty ~/.config/alacritty_backup_old
     }
   end
   run %{
-    cp -r #{__dir__}/config/kitty ~/.config
+    cp -r #{__dir__}/config/alacritty ~/.config
   }
   puts '======================================================'
 end
@@ -155,7 +153,7 @@ task :install do
     done_neovim
   end
 
-  install_kitty if ask('kitty terminal')
+  install_alacritty if ask('alacritty terminal')
 
   done
 end
