@@ -14,6 +14,9 @@ vim.o.lazyredraw = true
 vim.o.background = 'dark'
 vim.o.termguicolors = true
 vim.bo.syntax  = 'enable'
+vim.bo.tabstop = 4
+vim.bo.shiftwidth = 4
+vim.bo.expandtab = true
 vim.g.material_style = 'palenight'
 
 vim.cmd 'colorscheme material'
