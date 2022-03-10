@@ -16,5 +16,15 @@ vim.o.termguicolors = true
 vim.bo.syntax  = 'enable'
 vim.g.material_style = 'palenight'
 
-vim.cmd[[ colorscheme material ]]
+vim.cmd 'colorscheme material'
+
+require('plugin/_autopairs')
+require('plugin/_gitsigns')
+require('plugin/_lspconfig')
+require('plugin/_lspsaga')
+require('plugin/_lualine')
+require('plugin/_material')
+require('plugin/_nvimcmp')
+require('plugin/_nvimtree')
+require('plugin/_treesitter')
 
