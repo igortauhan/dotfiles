@@ -27,6 +27,7 @@
   -  [nvim tree](https://github.com/kyazdani42/nvim-tree.lua)
 - Plugin manager
   -  [packer.nvim](https://github.com/wbthomason/packer.nvim)
+- All configuration files in Lua
 
 ## Prerequisites
 
