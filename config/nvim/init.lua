@@ -19,6 +19,7 @@ vim.bo.shiftwidth = 4
 vim.bo.expandtab = true
 
 vim.cmd 'colorscheme NeoSolarized'
+vim.cmd 'hi Normal guibg=NONE ctermbg=NONE'
 
 require('plugin/_autopairs')
 require('plugin/_gitsigns')
