@@ -5,7 +5,8 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- utils
+  use { 'kyazdani42/nvim-web-devicons' }
+  use { 'nvim-lua/plenary.nvim' }
   use {
     'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -17,7 +18,6 @@ return require('packer').startup(function()
     },
     config = function() require'nvim-tree'.setup {} end
   }
-  use { 'nvim-lua/plenary.nvim' }
   use { 'tpope/vim-surround' }
   use { 'windwp/nvim-autopairs' }
   use {
@@ -26,20 +26,11 @@ return require('packer').startup(function()
       'nvim-lua/plenary.nvim'
     },
   }
-
-  -- themming
   use { 'marko-cerovac/material.nvim' }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  use { 'kyazdani42/nvim-web-devicons' }
-  use {
-    'romgrk/barbar.nvim',
-    requires = {'kyazdani42/nvim-web-devicons'}
-  }
-
-  -- lsp plugins
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
