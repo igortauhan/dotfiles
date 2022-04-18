@@ -1,11 +1,12 @@
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'ayu_dark',
+    theme = 'solarized_dark',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
     always_divide_middle = true,
+    globalstatus = false,
   },
   sections = {
     lualine_a = {'mode'},

@@ -17,16 +17,14 @@ vim.bo.syntax  = 'enable'
 vim.bo.tabstop = 4
 vim.bo.shiftwidth = 4
 vim.bo.expandtab = true
-vim.g.material_style = 'palenight'
 
-vim.cmd 'colorscheme material'
+vim.cmd 'colorscheme NeoSolarized'
 
 require('plugin/_autopairs')
 require('plugin/_gitsigns')
 require('plugin/_lspconfig')
 require('plugin/_lspsaga')
 require('plugin/_lualine')
-require('plugin/_material')
 require('plugin/_nvimcmp')
 require('plugin/_nvimtree')
 require('plugin/_treesitter')
