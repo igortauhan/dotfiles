@@ -26,9 +26,9 @@ vim.api.nvim_set_keymap('n', '<Leader>cd', ':Lspsaga show_line_diagnostics<cr>',
 vim.api.nvim_set_keymap('n', '<Leader>ff', [[<cmd>Telescope find_files<cr>]], { noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<Leader>fg', [[<cmd>Telescope live_grep<cr>]], { noremap = true, silent = true})
 
--- barbar move between tabs
-vim.api.nvim_set_keymap('n', '<A-h>', ':BufferPrevious<cr>', { noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<A-l>', ':BufferNext<cr>', { noremap = true, silent = true})
+-- bufferline move between tabs
+vim.api.nvim_set_keymap('n', '<A-h>', ':BufferLineCycleNext<cr>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<A-l>', ':BufferLineCyclePrev<cr>', { noremap = true, silent = true})
 
 -- nvim tree toggle
 vim.api.nvim_set_keymap('n', '<Leader>t', ':NvimTreeToggle<cr>', { noremap = true, silent = true})

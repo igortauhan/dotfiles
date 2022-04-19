@@ -29,4 +29,5 @@ require('plugin/_lualine')
 require('plugin/_nvimcmp')
 require('plugin/_nvimtree')
 require('plugin/_treesitter')
+require('plugin/_bufferline')
 

@@ -27,6 +27,7 @@ return require('packer').startup(function()
     },
   }
   use 'overcache/NeoSolarized'
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
