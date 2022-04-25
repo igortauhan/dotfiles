@@ -34,14 +34,13 @@ autoload -Uz _zinit
 zinit light zdharma-continuum/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
-zinit pack"default+keys" for fzf
 # Load powerlevel10k theme
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
 
 # Aliases
-alias ll="exa -l -g -a --icons --git"
-alias lla="exa -l -g -a --icons --git --tree --level=3 -I=.git"
+alias ll="exa -l -g -a --git"
+alias lla="exa -l -g -a --git --tree --level=3 -I=.git"
 alias vim="nvim"
 alias tns="tmux -2 new -s"
 alias tls="tmux ls"
@@ -54,6 +53,8 @@ function chpwd() {
     emulate -L zsh
     ll
 }
+
+export PATH=$PATH:/home/asdf/.cargo/bin
 
 # Runs
 . $HOME/.asdf/asdf.sh
