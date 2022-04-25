@@ -54,7 +54,7 @@ function chpwd() {
     ll
 }
 
-export PATH=$PATH:/home/asdf/.cargo/bin
+export PATH=$PATH:$HOME/.cargo/bin
 
 # Runs
 . $HOME/.asdf/asdf.sh
