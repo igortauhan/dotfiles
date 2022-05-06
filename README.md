@@ -55,7 +55,7 @@
 >
 > If the zinit installation is stuck at ***INFO: Updating $HOME/.zshrc(10 lines of code, at the bottom)*** just type enter
 >
-> Open Neovim, runs: :PackerSync to install all Plugins, restart and runs: :TSInstall all to install Treesitter highlighting.
+> Open Neovim, runs: :PackerSync to install all Plugins, restart and runs: :TSInstall all to install Treesitter highlighting. Sometimes the `:PackerSync` may fail, if it is occurred, just enter with: R (capitalized R)
 
 - Clone the repo
 - Inside the repo folder, run -> rake install
